@@ -18,6 +18,13 @@ export default function InputField({setCountry , setError ,Error ,setLoading} : 
       setLoading(true);
       // takes value from input and pass to fetch country data
       const data = await fetchCountry(inputValue);
+
+      // Block specific country by name (case-insensitive match)
+        if (data.name.common.toLowerCase() === "israel") {
+          setError("This country is not allowed.");
+          setCountry(null);
+          return;
+        }
       setCountry(data);
       setError("");
     } catch (err){
