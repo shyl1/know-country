@@ -19,7 +19,7 @@ export default function Home() {
           <Loader/>
         ) : (
           <div>
-            <CountryLayout country={country} error={Error} />
+            <CountryLayout country={country} />
           </div>
         )
       }

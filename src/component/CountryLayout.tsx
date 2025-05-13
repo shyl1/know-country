@@ -3,10 +3,9 @@ import CountryCard from "./CountryCard";
 
 type Props = {
   country : CountryResponse | null ;
-  error: string;
 }
 
-export default function CountryLayout({country , error}: Props) {
+export default function CountryLayout({country }: Props) {
 
   return (
     <section className="container">
